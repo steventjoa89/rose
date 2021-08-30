@@ -1,5 +1,6 @@
 <?php
-  if(isset($_POST['email'])){
+
+  if(isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message'])){
     // Insert into database
     $servername = "localhost";
     $username = "admin";
@@ -10,13 +11,14 @@
     if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
     }
-    $sql = "INSERT INTO subscriber (email_address, sent_subscription_email, created_at, updated_at) VALUES ('".addslashes($_POST['email'])."', 0, now(), now())";
+    $sql = "INSERT INTO email (`name`, email_address, `message`, created_at, updated_at) VALUES ('".addslashes($_POST['name'])."', '".addslashes($_POST['email'])."', '".addslashes($_POST['message'])."', now(), now())";
     if ($conn->query($sql) === TRUE) {
       echo "OK";
-    } else {
-      echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
     $conn->close();
   }
+
+
+  
 ?>
