@@ -30,17 +30,17 @@ h3.paragraph-policy {
 }
 
 p.paragraph-policy {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: inherit;
   font-family: Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif;
-  line-height: 1.6;
+  line-height: 1.4;
   padding-left: 14px;
 }
 p.paragraph-policy.strong {
   font-size: 16px;
   font-weight: inherit;
   font-family: Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif;
-  line-height: 1.6;
+  line-height: 1.4;
   padding-left: 14px;
   font-weight: bold;
 }
