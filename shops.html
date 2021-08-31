@@ -94,7 +94,7 @@
                                <h2 class="et_pb_module_header">ENTER THE WORLD OF</h2>
                                <span class="et_pb_fullwidth_header_subhead">ROSÉ JEWELERS</span>
                                <div class="et_pb_header_content_wrapper"></div>
-                               <a class="et_pb_button et_pb_more_button et_pb_button_one" href="">Shop The Collections</a>
+                               <span id="view-shop-collections" class="et_pb_button et_pb_more_button et_pb_button_one">Shop The Collections</span>
                             </div>
                          </div>
                       </div>
@@ -104,7 +104,7 @@
                   </div>
 
                   <!-- CATEGORIES -->
-                  <div class="et_pb_section et_pb_section_2 et_section_regular">
+                  <div id="shop-collections" class="et_pb_section et_pb_section_2 et_section_regular">
                     <div class="et_pb_row et_pb_row_1">
                       <div class="et_pb_column et_pb_column_4_4 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough et-last-child">
                          <div class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_center et_pb_bg_layout_light">
@@ -349,5 +349,13 @@
 	<script type='text/javascript' src='script/motion-effects.js'></script>
 	<script type='text/javascript' src='script/sticky-elements.js'></script>
 	<script defer src="script/beacon.min.js"></script>
+
+  <script>
+    $('#view-shop-collections').click(function() {
+      $('html, body').animate({
+        scrollTop: $("#shop-collections").offset().top
+      }, 500);
+    });
+  </script>
 </body>
 </html>
